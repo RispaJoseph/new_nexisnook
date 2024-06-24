@@ -359,76 +359,9 @@ const HomePage = () => {
         <SuggessionsContainer className='suggessions w-3/9'>
           
           <SuggesstionsTitle className="suggesstions__title">Suggesstions for you</SuggesstionsTitle>
-          <div className="suggesstions_usernames">
-            {usersNotFollowing ? showAllUsers ? usersNotFollowing.map((users) =>(
-              <SuggesstionUsername className="suggesstion__username" key={users.id}>
-                  <UsernameLeft className="username__left">
-                      <span className="avatar">
-                        <img
-                          className="w-10 h-10 rounded-full"
-                          src={`${BASE_URL}${users.display_pic}`}
-                          alt="user_image"
-                        />
-                      </span>
-                      <UsernameInfo className="username__info m-2">
-                          <Username className='username'>
-                            <NavLink className='font-bold cursor-pointer leading-tight text-[#262626] text-decoration-none' to={`/profile/${users.email}`}>
-                              {users.username}
-                            </NavLink>
-                          </Username>
-                          <Relation className='relation'>New to NexisNook</Relation>
-                      </UsernameInfo>
-                  </UsernameLeft>
-                  {users.email !== user.email &&
-                    (users.followers && users.followers.some(
-                      (follower) => follower.follower === user.email
-                    ) ? (
-                          <FollowButton className="follow__button" title={`Unfollow ${users.username}`} onClick={() => handleToggleFollow(users.id)}>Unfollow</FollowButton>
-                        ):(
-                          <FollowButton className="follow__button" title={`Follow ${users.username}`} onClick={() => handleToggleFollow(users.id)}>Follow</FollowButton>
-                  ))}
-              </SuggesstionUsername>
-            )): usersNotFollowing.slice(0, initialUsersToDisplay).map((users) => (
-              <SuggesstionUsername className="suggesstion__username" key={users.id}>
-                  <UsernameLeft className="username__left">
-                      <span className="avatar">
-                        <img
-                          className="w-10 h-10 rounded-full"
-                          src={`${BASE_URL}${users.display_pic}`}
-                          alt="user_image"
-                        />
-                      </span>
-                      <UsernameInfo className="username__info m-2">
-                          <Username className='username'>
-                            <NavLink className='font-bold cursor-pointer leading-tight text-[#262626] text-decoration-none' to={`/profile/${users.email}`}>
-                              {users.username}
-                            </NavLink>
-                          </Username>
-                          <Relation className='relation'>New to NexisNook</Relation>
-                      </UsernameInfo>
-                  </UsernameLeft>
-                  {users.email !== user.email &&
-                    (users.followers && users.followers.some(
-                      (follower) => follower.follower === user.email
-                    ) ? (
-                          <FollowButton className="follow__button" title={`Unfollow ${users.username}`} onClick={() => handleToggleFollow(users.id)}>Unfollow</FollowButton>
-                        ):(
-                          <FollowButton className="follow__button" title={`Follow ${users.username}`} onClick={() => handleToggleFollow(users.id)}>Follow</FollowButton>
-                  ))}
-              </SuggesstionUsername>
-            ))
-            :(
-              <SuggesstionUsername className="suggesstion__username">
-                  {/* Render the first user here */}
-              </SuggesstionUsername>
-              )}
-          </div>
           
-          {usersNotFollowing && usersNotFollowing.length > initialUsersToDisplay && (
-              <button className='font-bold cursor-pointer' style={{ color: 'gray' }} onClick={toggleShowAllUsers}>
-                {showAllUsers ? 'Show Less' : 'Show More'}
-              </button>
-          )}
+          
+          
         </SuggessionsContainer>
       </div>
       </ContentContainer>

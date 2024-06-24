@@ -209,7 +209,7 @@ const NavBar = ({ updatePostList }) => {
 
   return (
     <NavBarWrapper>
-      <Logo to='/'>Instaconnect</Logo>
+      <Logo to='/'>NexisNook</Logo>
       <ButtonContainer>
         <NavButton to="/">
           <HomeIcon />
