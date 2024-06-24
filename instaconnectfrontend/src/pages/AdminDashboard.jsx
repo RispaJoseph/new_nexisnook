@@ -279,15 +279,6 @@ const AdminDashboard = () => {
             <h3>DASHBOARD</h3>
           </MainTitle>
           <MainCards className="main-cards">
-            <FirstCard className="card">
-              <CardInner className="card-inner">
-                <h3>POSTS</h3>
-                <CardIcon>
-                  <BsListCheck className='card_icon' />
-                </CardIcon>
-              </CardInner>
-              <h1>{totalPosts?.length || 0}</h1>
-            </FirstCard>
             <SecondCard className="card">
               <CardInner className="card-inner">
                 <h3>USERS</h3>
@@ -297,61 +288,7 @@ const AdminDashboard = () => {
               </CardInner>
               <h1>{totalUsers?.length || 0}</h1>
             </SecondCard>
-            <ThirdCard className="card">
-              <CardInner className="card-inner">
-                <h3>REPORTS</h3>
-                <CardIcon>
-                  <BsMenuButtonWideFill className='card_icon' />
-                </CardIcon>
-              </CardInner>
-              <h1>{totalReportedPosts?.length || 0}</h1>
-            </ThirdCard>
           </MainCards>
-          <Charts className="charts">
-            <ResponsiveContainer width="100%" height="100%">
-              <BarChart
-                width={500}
-                height={300}
-                data={chartData}
-                margin={{
-                  top: 5,
-                  right: 30,
-                  left: 20,
-                  bottom: 5,
-                }}
-              >
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="name" />
-                <YAxis />
-                <Tooltip />
-                <Legend />
-                <Bar dataKey="value" fill="#8884d8" />
-                {/* <Bar dataKey="uv" fill="#82ca9d" /> */}
-                </BarChart>
-            </ResponsiveContainer>
-
-            <ResponsiveContainer width="100%" height="100%">
-              <LineChart
-                width={500}
-                height={300}
-                data={chartData}
-                margin={{
-                  top: 5,
-                  right: 30,
-                  left: 20,
-                  bottom: 5,
-                }}
-              >
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="name" />
-            <YAxis />
-            <Tooltip />
-            <Legend />
-            <Line type="monotone" dataKey="value" stroke="#8884d8" activeDot={{ r: 8 }} />
-            {/* <Line type="monotone" dataKey="uv" stroke="#82ca9d" /> */}
-            </LineChart>
-            </ResponsiveContainer>
-          </Charts>
         </MainContainer>
       </GridContainer>
     </Body>

@@ -318,7 +318,7 @@ const ProfilePage = () => {
                 <div className="flex" style={{ marginLeft: '-20px' }}>
                   <div className="lg:mr-4 p-3 text-center">
                     <span className="text-xl font-bold block uppercase tracking-wide text-blueGray-900"></span>
-                    <CustomText style={{ fontWeight: 'bold' }} className="text-sm text-blueGray-400">{profile?.total_posts ?? "0"}  Posts</CustomText>
+                    <CustomText style={{ fontWeight: 'bold' }} className="text-sm text-blueGray-400">0 Posts</CustomText>
                   </div>
                   {user?.email === profile?.email ? (
                     <div className="flex">
@@ -329,7 +329,7 @@ const ProfilePage = () => {
                           className="text-sm text-blueGray-400"
                           onClick={() => setShowNetworkModal(true)}
                         >
-                          {profile?.following_count ?? "0"}  Followers
+                          0 Followers
                         </CustomText>
                       </div>
                       <div className="mr-4 p-3 text-center">
@@ -339,7 +339,7 @@ const ProfilePage = () => {
                           className="text-sm text-blueGray-400"
                           onClick={() => setShowNetworkModal(true)}
                         >
-                          {profile?.follower_count ?? "0"} Following
+                          0 Following
                         </CustomText>
                       </div>
                     </div>
@@ -385,7 +385,7 @@ const ProfilePage = () => {
 
 
         {/* <div className="mt-10 py-10 border-t border-blueGray-200 text-center"> */}
-        <ImagesContainer>
+        {/* <ImagesContainer>
           {posts && posts.length > 0 ? (
             posts.map((post) => (
               <ImageWrapper
@@ -398,7 +398,7 @@ const ProfilePage = () => {
           ) : (
             <h4>No posts available.</h4>
           )}
-        </ImagesContainer>
+        </ImagesContainer> */}
         
       </ProfileContentWrapper>
     </UserPage>

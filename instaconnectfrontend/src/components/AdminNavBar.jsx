@@ -94,17 +94,17 @@ const AdminNavBar = () => {
           </SidebarLink>
         </SidebarListItem>
         <SidebarListItem>
-          <SidebarLink to="/users">
+          <SidebarLink to="">
           <Icon ><BsPeopleFill className='icon'/></Icon>Users
           </SidebarLink>
         </SidebarListItem>
         <SidebarListItem>
-          <SidebarLink to="/posts-lists">
+          <SidebarLink to="">
           <Icon ><BsListCheck className='icon'/></Icon>Posts
           </SidebarLink>
         </SidebarListItem>
         <SidebarListItem>
-          <SidebarLink to="/reported-posts">
+          <SidebarLink to="">
           <Icon ><BsMenuButtonWideFill className='icon'/></Icon>Reports
           </SidebarLink>
         </SidebarListItem>

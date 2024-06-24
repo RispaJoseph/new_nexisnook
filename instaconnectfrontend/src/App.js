@@ -11,13 +11,13 @@ import HomePage from './pages/HomePage';
 import ProfilePage from './pages/ProfilePage';
 import AdminDashboard from './pages/AdminDashboard';
 import UsersList from './pages/UsersList';
-import ReportedPostsList from './pages/ReportedPostsList';
-import PostsLists from './pages/PostsLists';
+// import ReportedPostsList from './pages/ReportedPostsList';
+// import PostsLists from './pages/PostsLists';
 import ForgotPassword from './pages/ForgotPassword';
 import ChangePassword from './pages/ChangePassword';
-import ExplorePage from './pages/ExplorePage';
+// import ExplorePage from './pages/ExplorePage';
 import { ToastContainer } from 'react-toastify';
-import Messages from './pages/Messages';
+// import Messages from './pages/Messages';
 import ErrorPage from './pages/ErrorPage';
 
 function App() {
@@ -38,14 +38,14 @@ function App() {
           <Route path='/admin-login' element={<AdminLogin/>}/>
           <Route path='/register' element={<RegisterPage/>}/>
           <Route path='/home' element={<HomePage/>}/>
-          <Route path='/explore' element={<ExplorePage/>}/>
-          <Route path='/messages' element={<Messages/>}/>
+          {/* <Route path='/explore' element={<ExplorePage/>}/>
+          <Route path='/messages' element={<Messages/>}/> */}
           <Route path='/profile/:email' element={<ProfilePage />}/>
 
           <Route path='/admin-dashboard' element={<AdminDashboard />} />
           <Route path='/users' element={<UsersList />} />
-          <Route path='/posts-lists' element={<PostsLists />} />
-          <Route path='/reported-posts' element={<ReportedPostsList />} />
+          {/* <Route path='/posts-lists' element={<PostsLists />} />
+          <Route path='/reported-posts' element={<ReportedPostsList />} /> */}
 
           <Route path='*' element={<ErrorPage />} />
         </Routes>
